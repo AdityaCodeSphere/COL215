@@ -87,7 +87,6 @@ def find_best_placement(rectangles):
 w_min = main_rectangles[0][0]
 w_max = sum(main_rectangles[i][0] for i in range(len(main_rectangles)))
 
-rectangles = copy.deepcopy(main_rectangles)
 best_height = -1
 best_width = -1
 best_area = -1
@@ -95,6 +94,7 @@ best_cordinate = []
 
 
 for w in range(w_min, w_max):
+    rectangles = copy.deepcopy(main_rectangles)
     h = 0
     area = 0
     cordinate = []
